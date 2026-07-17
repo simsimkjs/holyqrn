@@ -1,0 +1,18 @@
+﻿.root {
+    -fx-base: #f4f4f4;
+    -fx-background: #f4f4f4;
+    -fx-text-fill: #333333;
+}
+
+.label {
+    -fx-text-fill: #333333;
+}
+
+.button {
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #333333;
+}
+
+.button:hover {
+    -fx-background-color: #d0d0d0;
+}

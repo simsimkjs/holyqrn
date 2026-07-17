@@ -1,0 +1,312 @@
+.root{
+    -fx-font-family:"Amiri";
+    -fx-background-color:#F8F6F0;
+}
+
+.header{
+    -fx-background-color:#163A5F;
+    -fx-padding:15;
+}
+
+.title{
+    -fx-font-size:30px;
+    -fx-font-weight:bold;
+    -fx-text-fill:white;
+}
+
+.sidebar{
+
+    -fx-background-color:#EFE7D6;
+
+    -fx-border-color:#D5C39B;
+
+    -fx-border-width:0 1 0 0;
+
+    -fx-padding:15;
+
+}
+
+.button{
+
+    -fx-background-color:#0F766E;
+
+    -fx-text-fill:white;
+
+    -fx-background-radius:8;
+
+    -fx-font-size:15;
+
+}
+
+.button:hover{
+
+    -fx-background-color:#0C5F59;
+
+    -fx-cursor:hand;
+
+}
+
+.button:pressed{
+
+    -fx-background-color:#084B46;
+
+}
+
+.combo-box{
+
+    -fx-background-color:white;
+
+    -fx-background-radius:8;
+
+    -fx-border-radius:8;
+
+    -fx-border-color:#CCCCCC;
+
+}
+
+.combo-box .list-cell{
+
+    -fx-background-color:white;
+
+    -fx-text-fill:#222;
+
+}
+
+.combo-box-popup .list-view{
+
+    -fx-background-color:white;
+
+}
+
+.combo-box-popup .list-cell{
+
+    -fx-background-color:white;
+
+    -fx-text-fill:#222;
+
+}
+
+.combo-box-popup .list-cell:hover{
+
+    -fx-background-color:#E8F0FE;
+
+}
+
+.combo-box-popup .list-cell:selected{
+
+    -fx-background-color:#D6EAF8;
+
+    -fx-text-fill:#222;
+
+}
+
+.text-field{
+
+    -fx-background-radius:8;
+
+    -fx-border-radius:8;
+
+    -fx-border-color:#CCCCCC;
+
+    -fx-font-size:15;
+
+}
+
+.list-view{
+
+    -fx-background-color:transparent;
+
+    -fx-border-color:transparent;
+
+}
+
+.list-cell{
+
+    -fx-background-color:transparent;
+
+    -fx-padding:6;
+
+}
+
+.ayah-cell{
+
+    -fx-background-color:white;
+
+    -fx-background-radius:14;
+
+    -fx-border-radius:14;
+
+    -fx-border-color:#E5E5E5;
+
+    -fx-padding:14;
+
+}
+
+.list-cell:hover .ayah-cell{
+
+    -fx-background-color:#FAFAFA;
+
+}
+
+.list-cell:selected .ayah-cell{
+
+    -fx-background-color:#FFF8E1;
+
+    -fx-border-color:#C8A44D;
+
+    -fx-border-width:2;
+
+}
+
+.ayah-current{
+
+    -fx-background-color:#FFF3CD;
+
+    -fx-border-color:#F4B400;
+
+    -fx-border-width:3;
+
+}
+
+.ayah-number{
+
+    -fx-background-color:white;
+
+    -fx-border-color:#0F766E;
+
+    -fx-border-width:2;
+
+    -fx-background-radius:100;
+
+    -fx-border-radius:100;
+
+    -fx-min-width:40;
+
+    -fx-min-height:40;
+
+    -fx-max-width:40;
+
+    -fx-max-height:40;
+
+    -fx-alignment:center;
+
+    -fx-font-size:15;
+
+    -fx-font-weight:bold;
+
+}
+
+.ayah-text{
+
+    -fx-font-family:"Amiri";
+
+    -fx-font-size:26;
+
+    -fx-text-fill:#222;
+
+    -fx-line-spacing:10;
+
+}
+
+.search-hit{
+
+    -fx-fill:#C62828;
+
+    -fx-font-weight:bold;
+
+    -fx-underline:true;
+
+}
+
+.search-panel{
+
+    -fx-background-color:white;
+
+    -fx-border-color:#DDDDDD;
+
+}
+
+.search-result-title{
+
+    -fx-font-size:17;
+
+    -fx-font-weight:bold;
+
+}
+
+.search-result-text{
+
+    -fx-font-size:15;
+
+}
+
+.slider .track{
+
+    -fx-background-color:#DDD;
+
+}
+
+.slider .thumb{
+
+    -fx-background-color:#0F766E;
+
+}
+
+.status{
+
+    -fx-background-color:#EFE7D6;
+
+}
+.search-card{
+
+    -fx-background-color:white;
+
+    -fx-background-radius:12;
+
+    -fx-border-radius:12;
+
+    -fx-border-color:#E0E0E0;
+
+    -fx-padding:12;
+
+}
+
+.search-card:hover{
+
+    -fx-background-color:#FFF8E1;
+
+    -fx-border-color:#D4AF37;
+
+}
+
+.search-surah{
+
+    -fx-font-size:18;
+
+    -fx-font-weight:bold;
+
+    -fx-text-fill:#0F766E;
+
+}
+
+.search-ayah{
+
+    -fx-background-color:#0F766E;
+
+    -fx-background-radius:15;
+
+    -fx-padding:3 10 3 10;
+
+    -fx-text-fill:white;
+
+    -fx-font-size:13;
+
+}
+
+.search-preview{
+
+    -fx-font-size:20;
+
+    -fx-line-spacing:8;
+
+}

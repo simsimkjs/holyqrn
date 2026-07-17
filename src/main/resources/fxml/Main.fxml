@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+
+<BorderPane fx:id="rootPane" xmlns:fx="http://javafx.com/fxml/1" nodeOrientation="RIGHT_TO_LEFT" xmlns="http://javafx.com/javafx/23" fx:controller="com.quranplayer.controller.MainController">
+
+    <!-- Header -->
+    <top>
+        <HBox alignment="CENTER" spacing="10" styleClass="header">
+            <padding>
+                <Insets bottom="15" top="15" />
+            </padding>
+            <Label styleClass="title" text="القرآن الكريم" />
+        </HBox>
+    </top>
+
+    <!-- Sidebar -->
+    <left>
+        <ScrollPane fitToWidth="true" prefWidth="280" hbarPolicy="NEVER" styleClass="sidebar-scroll">
+            <VBox prefWidth="260" spacing="12" styleClass="sidebar">
+                <padding>
+                    <Insets bottom="20" left="15" right="15" top="20" />
+                </padding>
+
+                <!-- السورة -->
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="السورة" prefWidth="45" />
+                    <ComboBox fx:id="surahCombo" prefWidth="160" />
+                </HBox>
+
+                <!-- الجزء -->
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="الجزء" prefWidth="45" />
+                    <ComboBox fx:id="juzCombo" prefWidth="160" />
+                </HBox>
+
+                <!-- الآية -->
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="الآية" prefWidth="45" />
+                    <ComboBox fx:id="ayahCombo" prefWidth="160" />
+                </HBox>
+
+                <!-- بحث -->
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="بحث" prefWidth="45" />
+                    <TextField fx:id="searchField"
+                               promptText="ابحث في القرآن..."
+                               HBox.hgrow="ALWAYS" />
+                    <Button fx:id="clearSearchButton" text="✕">
+                        <tooltip>
+                            <Tooltip text="مسح البحث" />
+                        </tooltip>
+                    </Button>
+                </HBox>
+
+                <Separator />
+
+                <!-- أزرار التحكم -->
+                <HBox spacing="10" alignment="CENTER">
+                    <Button fx:id="playButton" text="▶" onAction="#onPlay">
+                        <tooltip>
+                            <Tooltip text="تشغيل" />
+                        </tooltip>
+                    </Button>
+                    <Button fx:id="pauseButton" text="⏸" onAction="#onPause" disable="true">
+                        <tooltip>
+                            <Tooltip text="إيقاف مؤقت" />
+                        </tooltip>
+                    </Button>
+                    <Button fx:id="stopButton" text="⏹" onAction="#onStop" disable="true">
+                        <tooltip>
+                            <Tooltip text="إيقاف" />
+                        </tooltip>
+                    </Button>
+                </HBox>
+
+                <!-- مؤشر التحميل -->
+                <ProgressBar fx:id="loadingProgressBar"
+                             progress="0"
+                             maxWidth="Infinity"
+                             visible="false"
+                             managed="false" />
+
+                <!-- شريط التقدم -->
+                <VBox spacing="4">
+                    <Slider fx:id="progressSlider" min="0" max="0" value="0" />
+                    <HBox spacing="10" alignment="CENTER">
+                        <Label fx:id="currentTimeLabel" text="00:00" />
+                        <Label text="/" />
+                        <Label fx:id="totalTimeLabel" text="00:00" />
+                    </HBox>
+                </VBox>
+
+                <!-- التحكم بالصوت -->
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="الصوت" prefWidth="45" />
+                    <Slider fx:id="volumeSlider" min="0" max="1" value="1" HBox.hgrow="ALWAYS" />
+                </HBox>
+
+
+            </VBox>
+        </ScrollPane>
+    </left>
+
+    <!-- Center -->
+    <center>
+
+        <SplitPane dividerPositions="0.72">
+
+            <items>
+
+                <ListView fx:id="verseList"
+                          focusTraversable="false"
+                          styleClass="verse-list"/>
+
+                <VBox fx:id="searchPanel"
+                      prefWidth="340"
+                      visible="false"
+                      managed="false"
+                      spacing="8"
+                      styleClass="search-panel">
+
+                    <padding>
+                        <Insets top="10" bottom="10" left="10" right="10"/>
+                    </padding>
+
+                    <Label fx:id="searchTitle"
+                           text="نتائج البحث"/>
+
+                    <Label fx:id="searchCountLabel"
+                           text=""/>
+
+                    <ListView fx:id="searchResults"
+                              VBox.vgrow="ALWAYS"/>
+
+                </VBox>
+
+            </items>
+
+        </SplitPane>
+
+    </center>
+
+    <!-- Status -->
+    <bottom>
+        <HBox spacing="10" alignment="CENTER_LEFT" styleClass="status">
+            <padding>
+                <Insets bottom="8" left="15" right="15" top="8" />
+            </padding>
+            <Label fx:id="statusLabel" text="جاهز" />
+        </HBox>
+    </bottom>
+
+</BorderPane>
